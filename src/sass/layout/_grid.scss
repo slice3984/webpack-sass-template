@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+
+    @for $i from 2 through 5 {
+        &--#{$i}-cols {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 9.6rem;
+    }
+}
